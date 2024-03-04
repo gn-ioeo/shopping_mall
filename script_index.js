@@ -15,28 +15,13 @@ function navigate() {
     thisIndex = 0;
   }
 
-  if (thisIndex === thumbnails.length) {
-    thisIndex = 0;
-  }
-
-  
-
-
   main.src = thumbnails[thisIndex].src;
   
-
   thumbnails[thisIndex].classList.add("active");
   thumbnails[previousIndex].classList.remove("active");
 
   previousIndex = thisIndex;
-
-
 }
-
-
-
-
-
 
 
 // 2
@@ -72,21 +57,20 @@ btn.addEventListener("click", function() {
 
 //slide
 const swiper = new Swiper('.swiper', {
-    // Optional parameters
-    loop: true,
-  ﻿  slidesPerView: 1,
-    // If we need pagination
+    loop: true, //무한루프
+  ﻿  slidesPerView: 1, //한번에 최대 보여줄 슬라이드 개수
+    // 페이지네이션 설정
     pagination: {
       el: '.swiper-pagination',
     },
   
-    // Navigation arrows
+    // 네비게이션 화살표 설정
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
   
-    // And if we need scrollbar
+    //스크롤바 설정
     scrollbar: {
       el: '.swiper-scrollbar',
     },

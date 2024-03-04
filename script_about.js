@@ -1,5 +1,3 @@
-
-
 var th = document.getElementsByClassName('th');
 var main2 = document.getElementById('main2')
 
@@ -17,16 +15,14 @@ var btn=document.getElementById("btn");
 var navi = document.getElementById("navi")
 
 window.addEventListener("scroll", function(){
-    //문서 탑과 뷰포트 사이의 거리
+
     var scrollTop = document.documentElement.scrollTop;
     console.log(scrollTop);
 
     if(scrollTop > 600) {
-        //탑버튼을 나타나게한다
         btn.classList.remove("invisible")
     }
     else{
-        //탑버튼을 사라지게
         btn.classList.add("invisible")
     }
 
@@ -37,7 +33,6 @@ window.addEventListener("scroll", function(){
     }
 })
 
-//탑버튼을 클릭했을 때
 btn.addEventListener("click", function() {
     document.documentElement.scrollTop=0;
 })
